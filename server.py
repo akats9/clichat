@@ -2,7 +2,7 @@ import socket
 
 def start_server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    host = input("Enter host ip address or hostname:\n")  # Listen on all available interfaces
+    host = '0.0.0.0'  # Listen on all available interfaces
     port = int(input("Enter port:\n"))  # Choose a port number
 
     server_socket.bind((host, port))
