@@ -2,7 +2,7 @@ import socket
 
 def start_client():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    host = '127.0.0.1'  # Change to the server's IP address
+    host = input("Enter server ip address or hostname:")  # Change to the server's IP address
     port = int(input("Enter port:"))  # Use the same port number as the server
 
     client_socket.connect((host, port))
